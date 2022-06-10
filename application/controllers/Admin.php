@@ -305,7 +305,8 @@ class Admin extends CI_Controller
                     'gambar' => $model->UploadImage($date, './gambar/budaya/', 'gambar/budaya/'),
                     'jenis_kebudayaan' => $input->post('kategori'),
                     'deskripsi' => $input->post('deskripsi'),
-                    'judul' => $input->post('judul')
+                    'judul' => $input->post('judul'),
+                    'tanggal' => date('Y-m-d')
                 );
                 if ($model->updatebudaya($data, $id)) {
                     $pesan = array(
@@ -323,7 +324,8 @@ class Admin extends CI_Controller
                     'id_admin' => 1,
                     'jenis_kebudayaan' => $input->post('kategori'),
                     'deskripsi' => $input->post('deskripsi'),
-                    'judul' => $input->post('judul')
+                    'judul' => $input->post('judul'),
+                    'tanggal' => date('Y-m-d')
                 );
                 if ($model->updatebudaya($data, $id)) {
                     $pesan = array(
@@ -355,7 +357,8 @@ class Admin extends CI_Controller
                 'gambar' => $this->Mdl_admin->UploadImage($date, './gambar/budaya/', 'gambar/budaya/'),
                 'jenis_kebudayaan' => $input->post('kategori'),
                 'deskripsi' => $input->post('deskripsi'),
-                'judul' => $input->post('judul')
+                'judul' => $input->post('judul'),
+                'tanggal' => date('Y-m-d')
             );
             $this->db->trans_start();
             $this->db->insert("kebudayaan", $data);

@@ -53,6 +53,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 // $route['admin/kebudayaan'] = "admin/dashboard/kebudayaan";
 
 
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'homepage';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
